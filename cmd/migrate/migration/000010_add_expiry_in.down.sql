@@ -1,0 +1,1 @@
+alter table users_invitation drop column expiry;

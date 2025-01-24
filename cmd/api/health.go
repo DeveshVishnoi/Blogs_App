@@ -1,0 +1,20 @@
+package main
+
+import (
+	"net/http"
+)
+
+// Handler functin of the /health route.
+func (app *application) healthCheckHandler(w http.ResponseWriter, r *http.Request) {
+
+	data := map[string]string{
+		"status":  "ok",
+		"env":     app.config.env,
+		"version": version,
+	}
+
+	err := writeJson(w, http.StatusOK, data)
+	if err != nil {
+		app.internalServerError(w, r, err)
+	}
+}

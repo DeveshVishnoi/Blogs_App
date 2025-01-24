@@ -1,0 +1,27 @@
+{{define "subject"}} Finish Registration with DevBook {{end}}
+
+{{define "body"}}
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> 
+    <p style="font-size: 20px;">Hi {{.Username}},</p>
+    <p>Thanks for signing up for DevBook. We're excited to have you on board!</p></p>
+    <p>Before you can start using DevBook, you need to confirm your email address. Click the link below to confirm your email address:</p>
+    <p><a href="{{.ActivationURL}}">{{.ActivationURL}}</a></p>
+    <p>If you want to activate your account manually copy and paste the code from the link above</p>
+    <p>If you didn't sign up for DevBook, you can safely ignore this email.</p>
+
+    <p>Thanks,</p>
+    <p>The DevBook Team</p>
+  </body>
+</html>
+
+{{end}}
+
+
+
+

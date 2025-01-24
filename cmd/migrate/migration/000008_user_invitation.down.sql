@@ -1,0 +1,1 @@
+drop table is EXISTS users_invitation;
